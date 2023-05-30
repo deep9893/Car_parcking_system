@@ -1,0 +1,10 @@
+pandas
+PyYAML
+opencv-python
+
+pickle
+cvzone
+numpy
+scikit-learn
+apache-airflow
+-e .
