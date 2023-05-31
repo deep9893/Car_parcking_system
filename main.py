@@ -5,7 +5,7 @@ import cvzone as cvzone
 width, height = 107, 48
 
 try:
-    with open('C:\\Users\\deepp\\Downloads\\CarParkProject\\CarParkPos', 'rb') as f:
+    with open('D:\\Study\\project end to end\\Car_parcking_system\\dataset\\CarParkPos', 'rb') as f:
         posList = pickle.load(f)
 except:
     posList = []
@@ -20,12 +20,12 @@ def mouseClick(events, x, y, flags, params):
             if x1 < x < x1 + width and y1 < y < y1 + height:
                 posList.pop(i)
 
-    with open('C:\\Users\\deepp\\Downloads\\CarParkProject\\CarParkPos', 'wb') as f:
+    with open('D:\\Study\\project end to end\\Car_parcking_system\\dataset\\CarParkPos', 'wb') as f:
         pickle.dump(posList, f)
 
 
 while True:
-    img = cv2.imread('C:\\Users\\deepp\\Downloads\\CarParkProject\\carParkImg.png')
+    img = cv2.imread('D:\\Study\\project end to end\\Car_parcking_system\\dataset\\carParkImg.png')
     for pos in posList:
         cv2.rectangle(img, pos, (pos[0] + width, pos[1] + height), (255, 0, 255), 2)
 
@@ -38,9 +38,9 @@ cv2.destroyAllWindows()
 
 
  
-cap = cv2.VideoCapture('C:\\Users\\deepp\\Downloads\\CarParkProject\\carPark.mp4')
+cap = cv2.VideoCapture('D:\\Study\\project end to end\\Car_parcking_system\\dataset\\carPark.mp4')
  
-with open('C:\\Users\\deepp\\Downloads\\CarParkProject\\CarParkPos', 'rb') as f:
+with open('D:\\Study\\project end to end\\Car_parcking_system\\dataset\\CarParkPos', 'rb') as f:
     posList = pickle.load(f)
 width, height = 107, 48
  

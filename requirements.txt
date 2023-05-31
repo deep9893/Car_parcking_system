@@ -1,7 +1,6 @@
 pandas
 PyYAML
 opencv-python
-
 pickle
 cvzone
 numpy
